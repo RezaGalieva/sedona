@@ -1,7 +1,7 @@
 /* Variables */
 :root {
   --basic-blue: #81b3d2;
-  --basic-broun: #766357;
+  --basic-brown: #766357;
   --basic-black: #000000;
   --basic-white: #ffffff;
   --basic-gray: #888888;
@@ -13,8 +13,8 @@
   --special-date-gray: #f2f2f2;
   --special-deep-blue: #669ec0;
   --special-dark-blue: #5496bd;
-  --special-deep-broun: #604e43;
-  --special-dark-broun: #503e33;
+  --special-deep-brown: #604e43;
+  --special-dark-brown: #503e33;
   --special-dark-button: #ffffff4d;
   --special-border-color: #e5e5e5;
   --special-rating-gray: #666666;
@@ -82,17 +82,17 @@ p {
 }
 
 .button-secondary-br {
-  background-color: var(--basic-broun);
+  background-color: var(--basic-brown);
   color: var(--basic-white);
   border: 2px solid transparent;
 }
 
 .button-secondary-br:hover {
-  background-color: var(--special-deep-broun);
+  background-color: var(--special-deep-brown);
 }
 
 .button-secondary-br:active {
-  background-color: var(--special-dark-broun);
+  background-color: var(--special-dark-brown);
   color: var(--special-dark-button);
 }
 
@@ -128,7 +128,7 @@ p {
 }
 
 .site-navigation .current {
-  color: var(--basic-broun);
+  color: var(--basic-brown);
 }
 
 /* index.html main page */
