@@ -120,7 +120,8 @@
                   type="text"
                   name="min"
                   value="0"
-              /></label>
+                />
+              </label>
               <label class="filter-price"
                 >До
                 <input
@@ -128,7 +129,8 @@
                   type="text"
                   name="max"
                   value="3000"
-              /></label>
+                />
+              </label>
             </p>
             <input
               class="input-price-filter"
@@ -149,9 +151,7 @@
       </section>
       <section class="section-sorting">
         <h2 class="hidden-text">Секция сортировки</h2>
-        <h3 class="text-sorting">
-          Найдено:<!--Здесь будет вывено кол-во найденных эл-ов-->
-        </h3>
+        <h3>Найдено:<!--Здесь будет вывено кол-во найденных эл-ов--></h3>
         <form method="get" action="https://echo.htmlacademy.ru">
           <p class="text-sorting">Сортировка:</p>
           <label>
@@ -183,7 +183,7 @@
           </label>
           <p class="hidden-text">Сортировка по возрастанию по убыванию:</p>
           <label class="hidden-text-radio">
-            <p class="hidden-text">По возрастанию</p>
+            <span class="hidden-text">По возрастанию</span>
             <input
               class="input-ascending-radio"
               type="radio"
@@ -200,7 +200,7 @@
             </svg>
           </label>
           <label class="hidden-text-radio">
-            <p class="hidden-text">По убыванию</p>
+            <span class="hidden-text">По убыванию</span>
             <input
               class="input-descending-radio"
               type="radio"
@@ -279,8 +279,13 @@
               />
             </svg>
             <p class="rectangle-raiting">Рейтинг: 8,5</p>
-            <button class="button button-more" type="button">Подробнее</button>
-            <button class="button button-book" type="button">
+            <button class="button button-more button-primary-bl" type="button">
+              Подробнее
+            </button>
+            <button
+              class="button button-book button-secondary-br"
+              type="button"
+            >
               Забронировать
             </button>
           </li>
@@ -329,8 +334,13 @@
               />
             </svg>
             <p class="rectangle-raiting">Рейтинг: 8,9</p>
-            <button class="button button-more" type="button">Подробнее</button>
-            <button class="button button-book" type="button">
+            <button class="button button-more button-primary-bl" type="button">
+              Подробнее
+            </button>
+            <button
+              class="button button-book button-secondary-br"
+              type="button"
+            >
               Забронировать
             </button>
           </li>
@@ -367,8 +377,13 @@
               />
             </svg>
             <p class="rectangle-raiting">Рейтинг: 9,2</p>
-            <button class="button button-more" type="button">Подробнее</button>
-            <button class="button button-book" type="button">
+            <button class="button button-more button-primary-bl" type="button">
+              Подробнее
+            </button>
+            <button
+              class="button button-book button-secondary-br"
+              type="button"
+            >
               Забронировать
             </button>
           </li>
@@ -400,12 +415,12 @@
                 />
               </svg>
 
-              <p class="hidden-text">twitter</p></a
-            >
+              <p class="hidden-text">twitter</p>
+            </a>
           </li>
           <li class="icon-social">
-            <a class="social-button facebook" href="#"
-              ><svg
+            <a class="social-button facebook" href="#">
+              <svg
                 width="12"
                 height="22"
                 viewBox="0 0 12 22"
@@ -417,12 +432,12 @@
                   fill="white"
                 />
               </svg>
-              <p class="hidden-text">facebook</p></a
-            >
+              <p class="hidden-text">facebook</p>
+            </a>
           </li>
           <li class="icon-social">
-            <a class="social-button youtube" href="#"
-              ><svg
+            <a class="social-button youtube" href="#">
+              <svg
                 width="20"
                 height="16"
                 viewBox="0 0 20 16"
