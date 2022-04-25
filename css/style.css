@@ -18,6 +18,7 @@
   --special-dark-button: #ffffff4d;
   --special-border-color: #e5e5e5;
   --special-rating-gray: #666666;
+  --special-checkbox-gray: #6a6a6a;
 }
 
 /* Global */
@@ -204,6 +205,7 @@ p {
   width: 568px;
   height: 86px;
 }
+/* Modal popup */
 
 .modal-popup {
   background-color: var(--basic-white);
@@ -222,14 +224,40 @@ p {
   border: none;
 }
 
-.modal-popup input:hover {
-  background-color: var(--special-dark-gray);
-  border: none;
+.modal-popup .input-date {
+  width: 346px;
+  height: 38px;
 }
 
-.modal-popup input:focus {
+.modal-popup .input-number {
+  height: 38px;
+}
+
+.modal-popup .input-date:hover {
+  background-color: var(--special-dark-gray);
+}
+
+.modal-popup .input-date:focus {
   background: var(--basic-white);
-  border: 2px solid var(--special-border-color);
+  outline: 2px solid var(--special-border-color);
+}
+
+.modal-popup .input-date::-webkit-calendar-picker-indicator {
+  height: 38px;
+  background: url("../img/mini-img/calendar.svg");
+  background-repeat: no-repeat;
+}
+
+.modal-popup .input-date:hover::-webkit-calendar-picker-indicator {
+  background: url("../img/mini-img/calendar-black.svg");
+  background-repeat: no-repeat;
+}
+
+.modal-popup .input-date:focus::-webkit-calendar-picker-indicator {
+  background: url("../img/mini-img/calendar-blue.svg");
+  background-repeat: no-repeat;
+}
+.modal-popup .input-number:focus {
   outline: none;
 }
 
@@ -309,7 +337,7 @@ footer p {
 
 .section-filter {
   background-color: var(--basic-blue);
-  background-image: url("img/blurred-background.svg");
+  background-image: url("../img/blurred-background.svg");
   background-repeat: no-repeat;
 }
 
@@ -333,6 +361,47 @@ footer p {
   line-height: 21px;
   text-transform: uppercase;
   background: var(--basic-white);
+}
+
+/* Custom checkbox */
+
+.filter-input-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 1;
+}
+
+.filter-input-checkbox + span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.filter-input-checkbox + span::before {
+  margin-right: 17px;
+  width: 27px;
+  height: 23px;
+  content: "";
+  display: inline-block;
+  background-image: url("../img/mini-img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked + span::before {
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/mini-img/checkbox-on.svg");
+}
+
+.filter-input-checkbox:disabled + span {
+  color: var(--special-checkbox-gray);
+}
+
+.filter-input-checkbox:disabled + span::before {
+  background-image: url("../img/mini-img/dis-checkbox-off.svg");
+}
+
+.filter-input-checkbox:disabled:checked + span::before {
+  background-image: url("../img/mini-img/dis-checkbox-on.svg");
 }
 
 /* Text in fieldset */
