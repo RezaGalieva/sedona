@@ -163,14 +163,14 @@
         >
           <h3>Найдено:<!--Здесь будет вывено кол-во найденных эл-ов--></h3>
           <span class="text-sorting">Сортировка:</span>
-          <label class="label-sorting">
+          <label class="label-sorting" id="checkboxLabel">
             <input
               class="filter-input-radio"
               type="radio"
               name="sorting"
               value="price"
             />
-            <span class="filter-text-radio">По цене</span>
+            <span class="filter-text-radio"  tabindex="0" role="checkbox"  aria-labelledby="checkboxLabel">По цене</span>
           </label>
           <label class="label-sorting">
             <input
@@ -179,7 +179,7 @@
               name="sorting"
               value="type"
             />
-            <span class="filter-text-radio">По типу</span>
+            <span class="filter-text-radio " tabindex="0" role="checkbox">По типу</span>
           </label>
           <label class="label-sorting">
             <input
@@ -188,13 +188,13 @@
               name="sorting"
               value="rating"
             />
-            <span class="filter-text-radio">По рейтингу</span>
+            <span class="filter-text-radio" tabindex="0" role="checkbox">По рейтингу</span>
           </label>
           <div class="filter-spacer"></div>
           <div class="container-descending">
             <p class="hidden-text">Сортировка по возрастанию по убыванию:</p>
             <label class="input-ascending">
-              <span class="hidden-text">По возрастанию</span>
+              <span class="hidden-text" tabindex="0">По возрастанию</span>
               <input
                 class="input-descending-radio"
                 type="radio"
@@ -212,7 +212,7 @@
               </svg>
             </label>
             <label>
-              <span class="hidden-text">По убыванию</span>
+              <span class="hidden-text" tabindex="0">По убыванию</span>
               <input
                 class="input-descending-radio"
                 type="radio"
@@ -242,25 +242,27 @@
               src="img/hotel-Amara-Resort-&-Spa.jpg"
               alt="hotel Amara Resort & Spa"
             />
-            <h3>Amara Resort & Spa</h3>
+            <h3 class="cursor-pointer" tabindex="0">Amara Resort & Spa</h3>
             <p class="type-housing">Гостиница</p>
             <p class="type-price">От 4000 &#8381;</p>
             <div class="rating-star">
-              <img src="img/mini-img/Shape-star-blue.svg" alt="star" />
-              <img src="img/mini-img/Shape-star-blue.svg" alt="star" />
-              <img src="img/mini-img/Shape-star-blue.svg" alt="star" />
-              <img src="img/mini-img/Shape-star-blue.svg" alt="star" />
+              <img src="img/mini-img/Shape-star-blue.svg" alt="" />
+              <img src="img/mini-img/Shape-star-blue.svg" alt="" />
+              <img src="img/mini-img/Shape-star-blue.svg" alt="" />
+              <img src="img/mini-img/Shape-star-blue.svg" alt="" />
             </div>
             <p class="rectangle-raiting">Рейтинг: 8,5</p>
             <button
               class="button button-primary button-rating butt-one"
               type="button"
+              aria-label="Подробнее"
             >
               Подробнее
             </button>
             <button
               class="button button-secondary button-rating butt-two"
               type="button"
+              aria-label="Забронировать"
             >
               Забронировать
             </button>
@@ -271,24 +273,26 @@
               src="img/hotel-Desert-Quail-Inn.jpg"
               alt="hotel Desert Quail Inn"
             />
-            <h3>Desert Quail Inn</h3>
+            <h3 class="cursor-pointer" tabindex="0">Desert Quail Inn</h3>
             <p class="type-housing">Мотель</p>
             <p class="type-price">От 3000 &#8381;</p>
             <div class="rating-star">
-              <img src="img/mini-img/Shape-star-blue.svg" alt="star" />
-              <img src="img/mini-img/Shape-star-blue.svg" alt="star" />
-              <img src="img/mini-img/Shape-star-blue.svg" alt="star" />
+              <img src="img/mini-img/Shape-star-blue.svg" alt="" />
+              <img src="img/mini-img/Shape-star-blue.svg" alt="" />
+              <img src="img/mini-img/Shape-star-blue.svg" alt="" />
             </div>
             <p class="rectangle-raiting">Рейтинг: 8,9</p>
             <button
               class="button button-primary button-rating butt-one"
               type="button"
+              aria-label="Подробнее"
             >
               Подробнее
             </button>
             <button
               class="button button-secondary button-rating butt-two"
               type="button"
+              aria-label="Забронировать"
             >
               Забронировать
             </button>
@@ -299,23 +303,25 @@
               src="img/hotel-Villas-at-Poco-Diablo.jpg"
               alt="hotel Villas at Poco Diablo"
             />
-            <h3>Villas at Poco Diablo</h3>
+            <h3 class="cursor-pointer" tabindex="0">Villas at Poco Diablo</h3>
             <p class="type-housing">Апартаменты</p>
             <p class="type-price">От 2000 &#8381;</p>
             <div class="rating-star">
-              <img src="img/mini-img/Shape-star-blue.svg" alt="star" />
-              <img src="img/mini-img/Shape-star-blue.svg" alt="star" />
+              <img src="img/mini-img/Shape-star-blue.svg" alt="" />
+              <img src="img/mini-img/Shape-star-blue.svg" alt="" />
             </div>
             <p class="rectangle-raiting">Рейтинг: 9,2</p>
             <button
               class="button button-primary button-rating butt-one"
               type="button"
+              aria-label="Подробнее"
             >
               Подробнее
             </button>
             <button
               class="button button-secondary button-rating butt-two"
               type="button"
+              aria-label="Забронировать"
             >
               Забронировать
             </button>
@@ -362,7 +368,6 @@
           target="_blank"
         >
           <div class="footer-icon"></div>
-          <!-- <img src="img/icon-html-website.svg" alt="htmlacademy" /> -->
         </a>
       </div>
     </footer>
