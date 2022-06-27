@@ -9,75 +9,132 @@
     <link rel="icon" href="img/favicon/favicon-32.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicon/favicon-192.png" />
     <link rel="manifest" href="manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap"
+    />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и видео</a></li>
-          <li><a href="blank.html">Карта штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
-        </ul>
-      </nav>
-      <a href="index.html">
+  <body class="page-catalog-body">
+    <header class="main-header">
+      <div class="main-navigation-wrapper">
+        <nav class="main-navigation">
+          <ul class="site-navigation">
+            <li><a href="blank.html">Информация</a></li>
+            <li><a href="blank.html">Фото и видео</a></li>
+            <li><a href="blank.html">Карта штата</a></li>
+            <li><a class="current" href="#">Гостиницы</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a class="main-navigation-logo" href="index.html">
         <img src="img/logo.svg" alt="logo" />
       </a>
     </header>
-
-    <main>
-      <section>
-        <h2>Фильтр гостиниц</h2>
+    <main class="container">
+      <section class="section-filter">
+        <h2 class="hidden-text">Фильтр гостиниц</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
-            <legend>Инфраструктура</legend>
+            <legend class="legend-text">Инфраструктура</legend>
             <ul>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="pool" checked />
-                  Бассейн
+                  <input
+                    class="filter-input-checkbox"
+                    type="checkbox"
+                    name="pool"
+                    checked
+                  />
+                  <span>Бассейн</span>
                 </label>
               </li>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="parking" />
-                  Парковка
+                  <input
+                    class="filter-input-checkbox"
+                    type="checkbox"
+                    name="parking"
+                  />
+                  <span>Парковка</span>
                 </label>
               </li>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="wifi" />
-                  Wi-Fi
+                  <input
+                    class="filter-input-checkbox"
+                    type="checkbox"
+                    name="wifi"
+                  />
+                  <span>Wi-Fi</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Тип жилья</legend>
+            <legend class="legend-text">Тип жилья</legend>
             <ul>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="hotel" checked />
-                  Гостиница
+                  <input
+                    class="filter-input-checkbox"
+                    type="checkbox"
+                    name="hotel"
+                    checked
+                  />
+                  <span>Гостиница</span>
                 </label>
               </li>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="motel" checked />
-                  Мотель
+                  <input
+                    class="filter-input-checkbox"
+                    type="checkbox"
+                    name="motel"
+                    checked
+                  />
+                  <span>Мотель</span>
                 </label>
               </li>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="apartaments" checked />
-                  Апартаменты
+                  <input
+                    class="filter-input-checkbox"
+                    type="checkbox"
+                    name="apartaments"
+                    checked
+                    disabled
+                  />
+                  <span>Апартаменты</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Стоимость в сутки, &#8381;:</legend>
+            <legend class="legend-text">Стоимость в сутки, &#8381;:</legend>
+            <p>
+              <label class="filter-price"
+                >От
+                <input
+                  class="filter-input-price"
+                  type="text"
+                  name="min"
+                  value="0"
+                />
+              </label>
+              <label class="filter-price"
+                >До
+                <input
+                  class="filter-input-price"
+                  type="text"
+                  name="max"
+                  value="3000"
+                />
+              </label>
+            </p>
             <input
+              class="input-price-filter"
               type="range"
               id="priceslider"
               name="priceslider"
@@ -85,46 +142,88 @@
               max="3000"
               step="1"
             />
-            <p>
-              <label>От <input type="text" name="min" value="0" /></label>
-              <label>До <input type="text" name="max" value="3000" /></label>
-              <input type="submit" value="Показать" />
-            </p>
+            <input
+              class="button button-filter"
+              type="submit"
+              value="Показать"
+            />
           </fieldset>
         </form>
       </section>
-      <section>
-        <h2>Секция сортировки</h2>
-        <p>Найдено:<!--Здесь будет вывено кол-во найденных эл-ов--></p>
+      <section class="section-sorting">
+        <h2 class="hidden-text">Секция сортировки</h2>
+        <h3>Найдено:<!--Здесь будет вывено кол-во найденных эл-ов--></h3>
         <form method="get" action="https://echo.htmlacademy.ru">
-          <p>Сортировка:</p>
+          <p class="text-sorting">Сортировка:</p>
           <label>
-            По цене
-            <input type="radio" name="sorting" value="price" checked />
+            <input
+              class="filter-input-radio"
+              type="radio"
+              name="sorting"
+              value="price"
+            />
+            <span class="filter-text-radio">По цене</span>
           </label>
           <label>
-            По типу
-            <input type="radio" name="sorting" value="type" />
+            <input
+              class="filter-input-radio"
+              type="radio"
+              name="sorting"
+              value="type"
+            />
+            <span class="filter-text-radio">По типу</span>
           </label>
           <label>
-            По рейтингу
-            <input type="radio" name="sorting" value="rating" />
+            <input
+              class="filter-input-radio"
+              type="radio"
+              name="sorting"
+              value="rating"
+            />
+            <span class="filter-text-radio">По рейтингу</span>
           </label>
-          <p>Сортировка по возрастанию по убыванию:</p>
-          <label>
-            По возрастанию
-            <input type="radio" name="choice" value="ascending" checked />
+          <p class="hidden-text">Сортировка по возрастанию по убыванию:</p>
+          <label class="hidden-text-radio">
+            <span class="hidden-text">По возрастанию</span>
+            <input
+              class="input-ascending-radio"
+              type="radio"
+              name="choice"
+              value="ascending"
+            />
+            <svg
+              width="11"
+              height="10"
+              viewBox="0 0 11 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M5.5 0L0 10H11L5.5 0Z" />
+            </svg>
           </label>
-          <label>
-            По убыванию
-            <input type="radio" name="choice" value="descending" />
+          <label class="hidden-text-radio">
+            <span class="hidden-text">По убыванию</span>
+            <input
+              class="input-descending-radio"
+              type="radio"
+              name="choice"
+              value="descending"
+            />
+            <svg
+              width="11"
+              height="10"
+              viewBox="0 0 11 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M5.5 10L0 0H11" />
+            </svg>
           </label>
         </form>
       </section>
-      <section>
-        <h2>Список выбранного жилья</h2>
+
+      <section class="section-catalog">
+        <h2 class="hidden-text">Список выбранного жилья</h2>
         <ul>
-          <li>
+          <li class="item-hotel">
             <h3>Amara Resort & Spa</h3>
             <img
               src="img/hotel-Amara-Resort-&-Spa.svg"
@@ -132,12 +231,66 @@
             />
             <p>Гостиница</p>
             <p>От 4000 &#8381;</p>
-            <p>4 звезды</p>
-            <p>Рейтинг: 8,5</p>
-            <button type="button">Подробнее</button>
-            <button type="button">Забронировать</button>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                fill="#81B3D2"
+              />
+            </svg>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                fill="#81B3D2"
+              />
+            </svg>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                fill="#81B3D2"
+              />
+            </svg>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                fill="#81B3D2"
+              />
+            </svg>
+            <p class="rectangle-raiting">Рейтинг: 8,5</p>
+            <button class="button button-more button-primary-bl" type="button">
+              Подробнее
+            </button>
+            <button
+              class="button button-book button-secondary-br"
+              type="button"
+            >
+              Забронировать
+            </button>
           </li>
-          <li>
+          <li class="item-hotel">
             <h3>Desert Quail Inn</h3>
             <img
               src="img/hotel-Desert-Quail-Inn.svg"
@@ -145,12 +298,54 @@
             />
             <p>Мотель</p>
             <p>От 3000 &#8381;</p>
-            <p>3 звезды</p>
-            <p>Рейтинг: 8,9</p>
-            <button type="button">Подробнее</button>
-            <button type="button">Забронировать</button>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                fill="#81B3D2"
+              />
+            </svg>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                fill="#81B3D2"
+              />
+            </svg>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                fill="#81B3D2"
+              />
+            </svg>
+            <p class="rectangle-raiting">Рейтинг: 8,9</p>
+            <button class="button button-more button-primary-bl" type="button">
+              Подробнее
+            </button>
+            <button
+              class="button button-book button-secondary-br"
+              type="button"
+            >
+              Забронировать
+            </button>
           </li>
-          <li>
+          <li class="item-hotel">
             <h3>Villas at Poco Diablo</h3>
             <img
               src="img/hotel-Villas-at-Poco-Diablo.svg"
@@ -158,38 +353,117 @@
             />
             <p>Апартаменты</p>
             <p>От 2000 &#8381;</p>
-            <p>2 звезды</p>
-            <p>Рейтинг: 9,2</p>
-            <button type="button">Подробнее</button>
-            <button type="button">Забронировать</button>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                fill="#81B3D2"
+              />
+            </svg>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                fill="#81B3D2"
+              />
+            </svg>
+            <p class="rectangle-raiting">Рейтинг: 9,2</p>
+            <button class="button button-more button-primary-bl" type="button">
+              Подробнее
+            </button>
+            <button
+              class="button button-book button-secondary-br"
+              type="button"
+            >
+              Забронировать
+            </button>
           </li>
         </ul>
       </section>
     </main>
 
-    <footer>
-      <section>
-        <h2>Контактная информация</h2>
+    <footer class="main-footer">
+      <section class="footer-contacts">
+        <h2 class="hidden-text">Контактная информация</h2>
         <p>#visitSEDONA</p>
-        <a href="tel:+78005558628">+7 800 555-86-28</a>
+        <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
       </section>
-      <section>
-        <h2>Соц.сети</h2>
+      <section class="footer-social">
+        <h2 class="hidden-text">Соц.сети</h2>
         <ul>
-          <li>
-            <a href="#">twitter</a>
+          <li class="icon-social">
+            <a class="social-button twitter" href="#">
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z"
+                  fill="white"
+                />
+              </svg>
+
+              <p class="hidden-text">twitter</p>
+            </a>
           </li>
-          <li>
-            <a href="#">facebook</a>
+          <li class="icon-social">
+            <a class="social-button facebook" href="#">
+              <svg
+                width="12"
+                height="22"
+                viewBox="0 0 12 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z"
+                  fill="white"
+                />
+              </svg>
+              <p class="hidden-text">facebook</p>
+            </a>
           </li>
-          <li>
-            <a href="#">youtube</a>
+          <li class="icon-social">
+            <a class="social-button youtube" href="#">
+              <svg
+                width="20"
+                height="16"
+                viewBox="0 0 20 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
+                  fill="white"
+                />
+              </svg>
+              <p class="hidden-text">youtube</p></a
+            >
           </li>
         </ul>
       </section>
-      <section>
+      <section class="footer-copyright">
         <h2>Website by</h2>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+        <a
+          class="footer-logo"
+          href="https://htmlacademy.ru/intensive/htmlcss"
+          target="_blank"
+        >
           <img src="img/icon-html-website.svg" alt="icon html website" />
         </a>
       </section>
