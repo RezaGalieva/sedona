@@ -9,10 +9,6 @@
     <link rel="icon" href="img/favicon/favicon-32.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicon/favicon-192.png" />
     <link rel="manifest" href="manifest.json" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap"
-    />
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
@@ -21,46 +17,36 @@
       <div class="main-navigation-wrapper">
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li><a href="blank.html">Информация</a></li>
-            <li><a href="blank.html">Фото и видео</a></li>
-            <li><a href="blank.html">Карта штата</a></li>
-            <li><a href="catalog.html">Гостиницы</a></li>
+            <li class="nav-inf"><a href="blank.html">Информация</a></li>
+            <li class="nav-ph"><a href="blank.html">Фото и видео</a></li>
+            <li class="nav-log">
+              <a class="main-navigation-logo" href="index.html">
+                <img src="img/logo.svg" alt="logotype" />
+              </a>
+            </li>
+            <li class="nav-map"><a href="blank.html">Карта штата</a></li>
+            <li class="nav-ht"><a href="catalog.html">Гостиницы</a></li>
           </ul>
         </nav>
-        <a class="main-navigation-logo" href="index.html">
-          <img src="img/logo.svg" alt="logo" />
-        </a>
       </div>
     </header>
 
     <main class="container">
-      <section class="background-images-lettering">
+      <section class="background-img-lettering">
         <h1 class="hidden-text">Седона</h1>
+        <div class="img-lett">
+          <img
+            class="img-lett-1"
+            src="img/lettering-welcome.svg"
+            alt="welcome"
+          />
+          <img src="img/lettering-to_the_gorgeous.svg" alt="to the gorgeous" />
+        </div>
         <img
-          class="img-background"
-          src="img/background-photo-welcomesedona.svg"
-          alt="background photo lettering"
-        />
-        <img
-          class="img-lettering"
-          src="img/lettering-welcome.svg"
-          alt="welcome"
-        />
-        <img
-          class="img-lettering"
-          src="img/lettering-to_the_gorgeous.svg"
-          alt="to the gorgeous"
-        />
-        <img
-          class="img-lettering"
           src="img/lettering-sedona_with_slogan.svg"
           alt="because the grand canyon sucks"
         />
-        <img
-          class="img-lettering"
-          src="img/background-white_outline.svg"
-          alt="outline"
-        />
+        <img src="img/background-white_outline.svg" alt="outline" />
       </section>
 
       <section class="slogan">
@@ -71,25 +57,26 @@
           Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
         </p>
       </section>
-      <section class="features-with-pictures">
+
+      <section class="features-with-pictures features-pictures-1">
         <div class="feature feature-left">
           <h3>Настоящий<br />городок</h3>
-          <p>-№1-</p>
+          <p class="text-number">-№1-</p>
           <p>
             Седона — не аттракцион для туристов, там<br />
             течёт своя жизнь
           </p>
         </div>
         <img
-          class="img-house"
-          src="img/image-house-of-sedona.svg"
+          class="img-right"
+          src="img/image-house-of-sedona.jpg"
           alt="house of sedona"
         />
       </section>
 
-      <section class="features-box features-icon">
-        <ul class="features-list">
-          <li class="feature-item">
+      <section>
+        <ul class="features-box features-list">
+          <li>
             <img src="img/icon-home.svg" alt="icon home" />
             <h3>Жильё</h3>
             <p>
@@ -97,7 +84,7 @@
               мотеле, всё как в кино!
             </p>
           </li>
-          <li class="feature-item">
+          <li>
             <img src="img/icon-eat.svg" alt="icon eat" />
             <h3>Еда</h3>
             <p>
@@ -105,7 +92,7 @@
               вы не разочаруетесь!
             </p>
           </li>
-          <li class="feature-item">
+          <li>
             <img src="img/icon-souvenirs.svg" alt="icon souvenirs" />
             <h3>Сувениры</h3>
             <p>
@@ -116,162 +103,217 @@
         </ul>
       </section>
 
-      <section class="features-with-pictures">
-        <img
-          class="img-canyon"
-          src="img/image-canyon.svg"
-          alt="picture canyon"
-        />
-        <ul class="features-list">
-          <li class="feature-item feature-2">
-            <h3>Там есть<br />Мост дьявола</h3>
-            <p>-№2-</p>
-            <p>Да, по нему можно пройти! Если конечно<br />вы осмелитесь</p>
-          </li>
-        </ul>
+      <section class="features-with-pictures features-pictures-2">
+        <img class="img-left" src="img/image-canyon.jpg" alt="picture canyon" />
+        <div>
+          <h3>Там есть<br />Мост дьявола</h3>
+          <p class="text-number">-№2-</p>
+          <p>Да, по нему можно пройти! Если конечно<br />вы осмелитесь</p>
+        </div>
       </section>
 
-      <section class="features-box">
-        <ul class="feature-item">
-          <li class="feature-item">
+      <section>
+        <ul class="features-box feature-item">
+          <li>
             <h3>небольшая<br />площадь</h3>
-            <p>-№3-</p>
+            <p class="text-number">-№3-</p>
             <p>все достопримечательности<br />находятся очень близко</p>
           </li>
-          <li class="feature-item">
+          <li>
             <h3>красивая<br />дорога</h3>
-            <p>-№4-</p>
+            <p class="text-number">-№4-</p>
             <p>ехать в седону из лас-вегаса совсем<br />не скучно!</p>
           </li>
-          <li class="feature-item">
+          <li>
             <h3>мало<br />туристов</h3>
-            <p>-№5-</p>
+            <p class="text-number">-№5-</p>
             <p>большинство едет в гранд каньон<br />и толпится там</p>
           </li>
         </ul>
       </section>
 
-      <section class="text-question">
-        <h2>Заинтересовались?</h2>
-        <p>
-          Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие
-          предложения гостиниц в седоне
-        </p>
-        <button class="button button-search button-secondary-br">
-          ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
-        </button>
-      </section>
-      <section class="modal-popup">
-        <h2 class="hidden-text">Поиск гостиницы в Седоне</h2>
-        <!--Попап поиска гостиницы в Седоне-->
-        <form method="get" action="https://echo.htmlacademy.ru">
-          <p class="arrival-item">
-            <label>
-              Дата заезда:
-              <input class="input-date" type="date" name="calendar" />
-            </label>
+      <section class="modal-popup-map-footer">
+        <div class="text-question">
+          <h2>Заинтересовались?</h2>
+          <p>
+            Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие
+            предложения гостиниц в седоне
           </p>
-          <p class="arrival-item">
-            <label>
-              Дата выезда:
-              <input class="input-date" type="date" name="calendar" />
-            </label>
-          </p>
-          <p class="arrival-item">
-            <label>
-              Взрослые:
-              <input class="input-number" type="text" min="1" value="1" />
-            </label>
-          </p>
-          <p class="arrival-item">
-            <label>
-              Дети:
-              <input class="input-number" type="text" min="0" value="0" />
-            </label>
-          </p>
-          <button class="button button-find button-primary-bl">НАЙТИ</button>
-        </form>
-      </section>
-      <section class="modal-map">
-        <h2>Карта</h2>
-        <!--Здесь будет карта местности-->
+        </div>
+        <div class="modal">
+          <h2 class="hidden-text">Поиск гостиницы в Седоне</h2>
+          <label
+            for="modal"
+            class="button button-search button-secondary"
+            tabindex="0"
+          >
+            ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
+          </label>
+
+          <div class="modal-container">
+            <input id="modal" class="show-modal-checkbox" type="checkbox" />
+            <form
+              method="get"
+              action="https://echo.htmlacademy.ru"
+              class="modal-popup"
+            >
+              <div class="grid-popup">
+                <label for="arrival-date" class="text-arrival">
+                  Дата заезда:
+                </label>
+                <input
+                  class="input-date input-arrival"
+                  type="date"
+                  name="arrival"
+                  id="arrival-date"
+                />
+                <label for="departure-date" class="text-departure">
+                  Дата выезда:
+                </label>
+                <input
+                  class="input-date input-departure"
+                  type="date"
+                  name="departure"
+                  id="departure-date"
+                />
+                <label for="amount-adults" class="text-adults">
+                  Взрослые:
+                </label>
+                <div class="input-adults">
+                  <button class="button btn-minus">
+                    <svg
+                      width="12"
+                      height="3"
+                      viewBox="0 0 12 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="12" height="3" />
+                    </svg>
+                  </button>
+                  <input
+                    class="input-number"
+                    type="number"
+                    min="1"
+                    value="1"
+                    name="adults"
+                    id="amount-adults"
+                  />
+                  <button class="button btn-plus">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <label for="amount-children" class="text-children">
+                  Дети:
+                </label>
+                <div class="input-children">
+                  <button class="button btn-minus">
+                    <svg
+                      width="12"
+                      height="3"
+                      viewBox="0 0 12 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="12" height="3" />
+                    </svg>
+                  </button>
+                  <input
+                    class="input-number"
+                    type="number"
+                    min="0"
+                    value="0"
+                    name="children"
+                    id="amount-children"
+                  />
+                  <button class="button btn-plus">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button class="button button-find button-primary">НАЙТИ</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="modal-map">
+          <h2 class="hidden-text">Карта</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.180505969125!2d-111.83015795700261!3d34.85437338104384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1655883817647!5m2!1sru!2sru"
+            width="1200"
+            height="594"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
     </main>
 
     <footer class="main-footer">
-      <section class="footer-contacts">
+      <div class="footer-contacts">
         <h2 class="hidden-text">Контактная информация</h2>
         <p>#visitSEDONA</p>
         <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-      </section>
-      <section class="footer-social">
+      </div>
+      <div>
         <h2 class="hidden-text">Соц.сети</h2>
-        <ul>
+        <ul class="footer-social">
           <li class="icon-social">
             <a class="social-button twitter" href="#">
-              <svg
-                width="17"
-                height="16"
-                viewBox="0 0 17 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z"
-                  fill="white"
-                />
-              </svg>
+              <img src="img/logo-twitter.svg" alt="twitter" />
               <p class="hidden-text">twitter</p>
             </a>
           </li>
           <li class="icon-social">
             <a class="social-button facebook" href="#">
-              <svg
-                width="12"
-                height="22"
-                viewBox="0 0 12 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z"
-                  fill="white"
-                />
-              </svg>
+              <img src="img/logo-fb-icon.svg" alt="facebook" />
               <p class="hidden-text">facebook</p>
             </a>
           </li>
           <li class="icon-social">
             <a class="social-button youtube" href="#">
-              <svg
-                width="20"
-                height="16"
-                viewBox="0 0 20 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
-                  fill="white"
-                />
-              </svg>
+              <img src="img/logo-youtube.svg" alt="youtube" />
               <p class="hidden-text">youtube</p>
             </a>
           </li>
         </ul>
-      </section>
-      <section class="footer-copyright">
-        <h2>Website by</h2>
+      </div>
+      <div class="footer-copyright">
+        <img src="img/website-by.svg" alt="website-by" />
         <a
           class="footer-logo"
           href="https://htmlacademy.ru/intensive/htmlcss"
           target="_blank"
         >
-          <img src="img/icon-html-website.svg" alt="icon html website" />
+          <div class="footer-icon"></div>
         </a>
-      </section>
+      </div>
     </footer>
   </body>
 </html>
