@@ -299,6 +299,12 @@ ul {
   margin: 0;
 }
 
+.btn-modal {
+  display: flex;
+  justify-content: center;
+  background-color: var(--basic-white);
+}
+
 .button-search {
   padding: 30px;
   text-align: center;
@@ -312,27 +318,18 @@ ul {
   position: relative;
 }
 
-.modal {
-  display: grid;
-  justify-items: center;
-  background-color: var(--basic-white);
-  position: relative;
-  width: 100%;
-}
-
-.show-modal-checkbox {
+.modal-container {
   display: none;
 }
 
-.show-modal-checkbox:not(:checked) + .modal-popup {
-  height: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.modal-container {
+.modal-show {
   display: flex;
   justify-content: center;
+  animation: open-popup 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-popup {
@@ -341,7 +338,6 @@ ul {
   height: 395px;
   width: 568px;
   padding: 55px 55px;
-  transition: all 500ms ease-in-out;
   overflow: hidden;
   box-shadow: 0px 7px 15px var(--shadow);
 }
@@ -942,4 +938,37 @@ footer p {
   padding: 6px 8px;
   font-size: 14px;
   height: 30px;
+}
+
+/* Animations */
+
+@keyframes open-popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

@@ -140,126 +140,119 @@
             предложения гостиниц в седоне
           </p>
         </div>
-        <div class="modal">
+        <div class="btn-modal">
           <h2 class="hidden-text">Поиск гостиницы в Седоне</h2>
-          <label
-            for="modal"
-            class="button button-search button-secondary"
-            tabindex="0"
-          >
-            ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
-          </label>
-
-          <div class="modal-container">
-            <input id="modal" class="show-modal-checkbox" type="checkbox" />
-            <form
-              method="get"
-              action="https://echo.htmlacademy.ru"
-              class="modal-popup"
-            >
-              <div class="grid-popup">
-                <label for="arrival-date" class="text-arrival">
-                  Дата заезда:
-                </label>
-                <input
-                  class="input-date input-arrival"
-                  type="date"
-                  name="arrival"
-                  id="arrival-date"
-                />
-                <label for="departure-date" class="text-departure">
-                  Дата выезда:
-                </label>
-                <input
-                  class="input-date input-departure"
-                  type="date"
-                  name="departure"
-                  id="departure-date"
-                />
-                <label for="amount-adults" class="text-adults">
-                  Взрослые:
-                </label>
-                <div class="input-adults">
-                  <button class="button btn-minus">
-                    <svg
-                      width="12"
-                      height="3"
-                      viewBox="0 0 12 3"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="12" height="3" />
-                    </svg>
-                  </button>
-                  <input
-                    class="input-number"
-                    type="number"
-                    min="1"
-                    value="1"
-                    name="adults"
-                    id="amount-adults"
-                  />
-                  <button class="button btn-plus">
-                    <svg
-                      width="11"
-                      height="11"
-                      viewBox="0 0 11 11"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <label for="amount-children" class="text-children">
-                  Дети:
-                </label>
-                <div class="input-children">
-                  <button class="button btn-minus">
-                    <svg
-                      width="12"
-                      height="3"
-                      viewBox="0 0 12 3"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="12" height="3" />
-                    </svg>
-                  </button>
-                  <input
-                    class="input-number"
-                    type="number"
-                    min="0"
-                    value="0"
-                    name="children"
-                    id="amount-children"
-                  />
-                  <button class="button btn-plus">
-                    <svg
-                      width="11"
-                      height="11"
-                      viewBox="0 0 11 11"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <button class="button button-find button-primary">НАЙТИ</button>
-            </form>
-          </div>
+          <button class="button button-secondary button-search" tabindex="0">
+            Поиск гостиницы в Седоне
+          </button>
         </div>
-
+        <div class="modal-container">
+          <form
+            class="modal-popup"
+            method="post"
+            action="https://echo.htmlacademy.ru"
+          >
+            <div class="grid-popup">
+              <label for="arrival-date" class="text-arrival">
+                Дата заезда:
+              </label>
+              <input
+                class="input-date input-arrival"
+                type="date"
+                name="arrival"
+                id="arrival-date"
+                required
+              />
+              <label for="departure-date" class="text-departure">
+                Дата выезда:
+              </label>
+              <input
+                class="input-date input-departure"
+                type="date"
+                name="departure"
+                id="departure-date"
+                required
+              />
+              <label for="amount-adults" class="text-adults"> Взрослые: </label>
+              <div class="input-adults" id="input-adults-container">
+                <button class="button btn-minus">
+                  <svg
+                    width="12"
+                    height="3"
+                    viewBox="0 0 12 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="12" height="3" />
+                  </svg>
+                </button>
+                <input
+                  class="input-number"
+                  type="number"
+                  min="1"
+                  value="1"
+                  name="adults"
+                  id="amount-adults"
+                />
+                <button class="button btn-plus">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <label for="amount-children" class="text-children"> Дети: </label>
+              <div class="input-children" id="input-children-container">
+                <button class="button btn-minus">
+                  <svg
+                    width="12"
+                    height="3"
+                    viewBox="0 0 12 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="12" height="3" />
+                  </svg>
+                </button>
+                <input
+                  class="input-number"
+                  type="number"
+                  min="0"
+                  value="0"
+                  name="children"
+                  id="amount-children"
+                />
+                <button class="button btn-plus">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <button type="submit" class="button button-primary button-find">
+              Найти
+            </button>
+          </form>
+        </div>
         <div class="modal-map">
           <h2 class="hidden-text">Карта</h2>
           <iframe
@@ -315,5 +308,6 @@
         </a>
       </div>
     </footer>
+    <script src="popupform.js"></script>
   </body>
 </html>
